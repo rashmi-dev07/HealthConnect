@@ -1,0 +1,236 @@
+/* RESET & BASE */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body { background-color: #f9f9f9; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    /* HEADER */
+    header { display: flex; justify-content: space-between;height:70px; align-items: center; padding: 20px 50px; background-color:#2a9d8f; color: white; }
+    header .logo { font-weight: 700; font-size: 24px; }
+    nav a { margin: 0 15px; font-weight: 500; }
+    .cta-btn { background-color: #E74C3C; padding: 10px 20px; border-radius: 5px; color: white; font-weight: 600; }
+    .cta-btn:hover{background-color: rgb(92, 106, 115);}
+    .logo {display: flex;align-items: center;font-weight: 700;font-size: 24px;}
+    .logo-img {height: 38px;width: auto; margin-right: 10px;margin-top:15px; border-radius: 12px; object-fit: contain; transform: scale(2.8); transform-origin: center; /* optional: makes it circular */}
+    /* === FIX HEADER ALIGNMENT === */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* spacing between button and menu icon */
+}
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  background: #ffffff33;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.menu-icon:hover {
+  background: #ffffff55;
+}
+    /* HERO SECTION */
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: rgb(78, 78, 226); color: white; }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; color: #39FF14; text-shadow: 0 0 30px #39FF14; }
+    .hero p { font-size: 20px; margin-bottom: 30px; }
+    .search-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px; }
+    .search-bar input { padding: 10px 15px; border-radius: 5px; border: none; width: 200px; }
+    .search-bar button { padding: 10px 20px; border-radius: 5px; border: none; background-color: #E74C3C; color: white; font-weight: 600; cursor: pointer; }
+    .search-bar button:hover{background-color: rgb(92, 106, 115);}
+    .emergency-btn { background-color: #ff3f3f;; padding: 12px 15px; border-radius: 8px; font-weight: 700; margin-top: 10px; }
+    .emergency-btn:hover{background-color: rgb(92, 106, 115);}
+    /* FEATURES */
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 60px 20px; text-align: center;background-color:#c9e6ff; }
+    .feature-card { background-color: #acf3f0; border-radius: 10px; padding: 30px; width: 250px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .feature-card:hover { transform: translateY(-10px); }
+    .feature-card img { width: 50px; margin-bottom: 15px; }
+    .feature-card h3 { font-weight: 600; margin-bottom: 10px; }
+    .feature-card p { font-size: 14px; color: #555; }
+    /* DOCTORS SECTION */
+    .doctors { padding: 60px 20px; text-align: center;background-color: #c9e6ff; }
+    .doctors h2 { font-weight: 700; margin-bottom: 40px; }
+    .doctor-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .doctor-card { background-color:rgb(223, 214, 198); border-radius: 10px; padding: 20px; width: 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .doctor-card:hover { transform: translateY(-10px); }
+    .doctor-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .doctor-card h4 { font-weight: 600; margin-bottom: 5px; }
+    .doctor-card p { font-size: 14px; color: #555; margin-bottom: 10px; }
+    .doctor-card button { background-color: #2E86DE; padding: 8px 15px; border-radius: 5px; color: white; border: none; font-weight: 600; cursor: pointer; }
+    /* HOW IT WORKS */
+    .how-it-works { background-color: #f1f3f6; padding: 60px 20px; text-align: center;background-color: #c9e6ff; }
+    .how-it-works h2 { font-weight: 700; margin-bottom: 40px; }
+    .steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .step { background-color:#acf3f0 ; padding: 30px; border-radius: 10px; width: 220px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .step:hover { transform: translateY(-10px); }
+    .step img { width: 50px; margin-bottom: 15px; }
+    .step h4 { font-weight: 600; margin-bottom: 10px; }
+    .step p { font-size: 14px; color: #555; }
+    /* FOOTER */
+    footer { background-color: #2a9d8f; color: white; text-align: center; padding: 30px 20px;  }
+    footer a { color: white; margin: 0 10px; }
+    .book-now-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3;
+}
+    /* MODALS */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 320px;
+      text-align: center;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      margin: 8px 5px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #1b5fa9; }
+    .link {
+      color: #2E86DE;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: block;
+    }
+    .otp-boxes {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .otp-boxes input {
+      width: 50px;
+      text-align: center;
+      font-size: 18px;
+      padding: 8px;
+    }
+    .hidden { display: none; }
+
+    @media (max-width: 768px) {
+      .features, .doctor-cards, .steps { flex-direction: column; align-items: center; }
+      .search-bar input { width: 100%; }
+    }
+    /* ✅ HERO SLIDESHOW BACKGROUND */
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bgSlide 20s infinite ease-in-out;
+  z-index: -1;
+  opacity: 1;
+}
+@keyframes bgSlide {
+  0% { background-image: url('photop3.jpg'); }
+  25% { background-image: url('photop2.jpg'); }
+  50% { background-image: url('photop1.jpg'); }
+  75% { background-image: url('photop4.jpg'); }
+  100% { background-image: url('photop5.jpg'); }
+}
+/* === SLIDE-IN MENU === */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 15px;
+  background: #ffffff33;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.menu-icon:hover {
+  background: #ffffff55;
+}
+/* Side menu container */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -270px; /* hidden off-screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+/* Menu open state */
+.side-menu.open {
+  right: 0;
+}
+/* Menu links */
+.side-menu a {
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+.side-menu a:hover {
+  background-color: #f5f5f5;
+  color: #2E86DE;
+}
+.announcement-bar {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.announcement-bar strong {
+  color: #ffcc00;
+  letter-spacing: 0.5px;
+}

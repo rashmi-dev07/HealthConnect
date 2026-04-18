@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Profile | HealthConnect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f9f9;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1eb2a6;
+      padding: 12px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-png {
+    height: 38px;width:38px;border-radius: 50%; margin-right: 10px;margin-top:15px; border-radius: 12px; object-fit: contain; transform: scale(2.8); transform-origin: center; }
+
+    .navbar img {
+      height: 45px;
+      margin-right: 10px;
+    }
+    .navbar h2 {
+      color: white;
+      font-size: 22px;
+      margin: 0;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li {
+      margin-left: 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .menu a:hover {
+      color: #ffe600;
+    }
+
+    /* PROFILE SECTION */
+    .profile-container {
+      max-width: 600px;
+      background: white;
+      margin: 50px auto;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1eb2a6;
+    }
+
+    .profile-buttons {
+      margin-top: 15px;
+    }
+    .profile-buttons button {
+      margin: 5px;
+      background-color: #1eb2a6;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .profile-buttons button:hover {
+      background-color: #149187;
+    }
+
+    .user-name {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .details {
+      text-align: left;
+      margin-top: 25px;
+    }
+    .details label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .details input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: #f9f9f9;
+    }
+    .details input:disabled {
+      background-color: #e8f7f6;
+      color: #666;
+    }
+
+    .save-btn {
+      display: none;
+      background-color: #0a7b74;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .save-btn:hover {
+      background-color: #06665f;
+    }
+
+    footer {
+      background-color: #1eb2a6;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="HealthConnect Logo" class="logo-png" />
+      <h2>HealthConnect</h2>
+    </div>
+    <ul class="menu">
+      <li><a href="web.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="hospitals.html">Hospitals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="profile.html">Your Profile</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile-container">
+    <img src="default-profile.png" alt="Profile Photo" id="profilePic" class="profile-pic" />
+    <div class="profile-buttons">
+      <label for="fileInput"><button id="addPhotoBtn">Add Photo</button></label>
+      <input type="file" id="fileInput" accept="image/*" />
+      <button id="editBtn">Edit</button>
+    </div>
+
+    <div class="user-name" id="userName">Rajesh jena</div>
+
+    <div class="details">
+      <label>Full Name:</label>
+      <input type="text" id="name" value="Rajesh jena" disabled />
+
+      <label>Email:</label>
+      <input type="email" id="email" value="r86051249@gmail.com" disabled />
+
+      <label>Mobile Number:</label>
+      <input type="text" id="mobile" value="9668692854" disabled />
+
+      <label>Address:</label>
+      <input type="text" id="address" value="Bhubaneswar, Odisha" disabled />
+
+      <label>Gender:</label>
+      <input type="text" id="gender" value="Male" disabled />
+
+      <label>Date of Birth:</label>
+      <input type="date" id="dob" value="2006-09-05" disabled />
+    </div>
+
+    <button class="save-btn" id="saveBtn">Save Changes</button>
+  </div>
+
+  <footer>
+    © 2025 HealthConnect. All Rights Reserved.
+  </footer>
+
+  <script>
+    const addPhotoBtn = document.getElementById("addPhotoBtn");
+    const fileInput = document.getElementById("fileInput");
+    const profilePic = document.getElementById("profilePic");
+    const editBtn = document.getElementById("editBtn");
+    const saveBtn = document.getElementById("saveBtn");
+    const inputs = document.querySelectorAll(".details input");
+
+    // Handle photo upload
+    fileInput.addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          profilePic.src = event.target.result;
+          addPhotoBtn.textContent = "Change Photo";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Open file manager on Add Photo click
+    addPhotoBtn.addEventListener("click", () => {
+      fileInput.click();
+    });
+
+    // Handle Edit button
+    editBtn.addEventListener("click", () => {
+      inputs.forEach(input => input.disabled = false);
+      saveBtn.style.display = "block";
+      editBtn.disabled = true;
+      editBtn.style.opacity = "0.5";
+    });
+
+    // Handle Save Changes
+    saveBtn.addEventListener("click", () => {
+      inputs.forEach(input => input.disabled = true);
+      saveBtn.style.display = "none";
+      editBtn.disabled = false;
+      editBtn.style.opacity = "1";
+      alert("Profile changes saved successfully!");
+    });
+  </script>
+</body>
+</html>

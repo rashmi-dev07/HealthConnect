@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Hospitals | HealthConnect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1eb2a6;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .logo img {
+      height: 45px;
+      margin-right: 10px;
+    }
+    .navbar h2 {
+      color: white;
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li {
+      margin-left: 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #ffe600;
+    }
+
+    /* PAGE HEADER */
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #1eb2a6, #0a7b74);
+      color: white;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .logo-png {
+    height: 38px;width:38px;border-radius: 50%; margin-right: 10px;margin-top:15px; border-radius: 12px; object-fit: contain; transform: scale(2.8); transform-origin: center; }
+
+    /* HOSPITAL TABLE */
+    .table-container {
+      width: 85%;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    thead {
+      background-color: #1eb2a6;
+      color: white;
+    }
+    th, td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #ddd;
+    }
+    tr:hover {
+      background-color: #f2f9f8;
+    }
+    th {
+      font-size: 16px;
+    }
+    td {
+      font-size: 15px;
+    }
+    td a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1eb2a6;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="HealthConnect Logo" class="logo-png">
+      <h2>HealthConnect</h2>
+    </div>
+    <ul class="menu">
+      <li><a href="web.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Your Profile</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Header -->
+  <div class="header">
+    <h1>Our Hospitals</h1>
+    <p>Explore our partner hospitals and their locations.</p>
+  </div>
+
+  <!-- Hospital Table -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sl. No</th>
+          <th>Hospital Name</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            Apollo Hospitals<br>
+            <a href="https://www.apollohospitals.com/" target="_blank">Visit Official Website</a>
+          </td>
+          <td>Bhubaneswar, Odisha</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>
+            AIIMS Hospital<br>
+            <a href="https://aiimsbhubaneswar.nic.in/" target="_blank">Visit Official Website</a>
+          </td>
+          <td>Bhubaneswar, Odisha</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            Kalinga Hospital<br>
+            <a href="https://www.kalingahospital.com/" target="_blank">Visit Official Website</a>
+          </td>
+          <td>Bhubaneswar, Odisha</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>
+            SUM Hospital<br>
+            <a href="https://www.soa.ac.in/ims-and-sum-hospital" target="_blank">Visit Official Website</a>
+          </td>
+          <td>Bhubaneswar, Odisha</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>
+            CARE Hospitals<br>
+            <a href="https://www.carehospitals.com/" target="_blank">Visit Official Website</a>
+          </td>
+          <td>Bhubaneswar, Odisha</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 HealthConnect. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Access !!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar same as appointment */
+    .navbar {
+      background-color: #2a9d8f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .navbar .logo img {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+    .logo-png {
+    height: 38px;width:38px;border-radius: 50%; margin-right: 10px;margin-top:15px; border-radius: 12px; object-fit: contain; transform: scale(2.8); transform-origin: center; }
+
+    .navbar-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .navbar-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Emergency Form Styling */
+    .emergency-container {
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      padding: 30px;
+      margin: 80px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: red;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4c4c;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #e60000;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: gray;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="HealthConnect Logo" class="logo-png">
+      HealthConnect
+    </div>
+    <div class="navbar-links">
+      <a href="web.html">Home</a>
+      <a href="appointment.html">Appointments</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Emergency Access Form -->
+  <div class="emergency-container">
+    <h2>🚑 Emergency Access !!</h2>
+    <form id="emergencyForm">
+      <label for="name">Patient Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="Enter address" required>
+
+      <label for="disease">Disease / Specialization:</label>
+      <input type="text" id="disease" name="disease" placeholder="Enter disease or specialization" required>
+
+      <button type="submit">Book Ambulance</button>
+    </form>
+  </div>
+
+  <footer>© 2025 HealthConnect | All rights reserved.</footer>
+
+  <script>
+    document.getElementById("emergencyForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("🚑 Ambulance booked successfully!");
+      window.location.href = "web.html";
+    });
+  </script>
+
+</body>
+</html>
